@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hello world</title>
+    <title>guessing game</title>
 </head>
 <body>
-    <h1>updated</h1>
+<h1>This is a guessing game</h1>
+<br><br><hr>
+<div class="ok"></div>
+<div class="itr"></div>
+<button onclick="start()" class="restart">start game</button>
+
+
+
+<script>
+    function start(){
+var guess= Number(prompt("what is your guessing number: "))
+var num= Number(prompt("enter a number: "))
+var x =1
+while(num!=guess){
+    num= Number(prompt("enter a number: "))
+    x++;
+}
+var good=document.querySelector(".ok")
+var attempt=document.querySelector(".itr")
+good.innerHTML = "CONGRATULATIONS! your number was: "+guess;
+attempt.innerHTML="chances taken: "+x;
+var button = document.querySelector(".restart")
+var body=document.querySelector("body")
+button.innerHTML = "restart game";
+    }
+</script>
+
+
+
+    
 </body>
 </html>
